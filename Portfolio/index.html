@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Archita Panda | Portfolio</title>
+
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    body {
+      scroll-behavior: smooth;
+    }
+
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      display: none;
+      z-index: 999;
+    }
+
+    footer {
+      background: #000;
+      color: white;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    .project-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height:400px
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    [data-aos] {
+      opacity: 0;
+      transition-property: transform, opacity;
+    }
+
+    .icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .typewriter {
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 3px solid #0d6efd;
+      animation: typing 2.5s steps(13, end), blink 0.7s step-end infinite
+    }
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+
+      to {
+        width: 70%;
+      }
+    }
+
+    @keyframes blink {
+      from,
+      to {
+        border-color: transparent;
+      }
+
+      50% {
+        border-color: #0d6efd;
+      }
+    }
+
+    /* Hero Section */
+    .hero-section img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 20px;
+      margin-top: 100px;
+    }
+
+    /* About Section */
+    .about-img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      margin: 0 auto 2rem auto;
+      transition: transform 0.6s ease, box-shadow 0.6s ease;
+    }
+
+    .about-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Button hover effects */
+    .custom-btn,
+    .contact-btn,
+    .two {
+      transition: all 0.3s ease;
+    }
+
+    .custom-btn:hover,
+    .two:hover {
+      transform: scale(1.1);
+      background-color: #0b5ed7;
+    }
+
+    .contact-btn:hover {
+      background: #0d6efd;
+      box-shadow: 0 0 15px rgba(13, 110, 253, 0.6);
+      transform: scale(1.05);
+    }
+
+    /* Skills */
+    .progress-bar {
+      width: 0;
+      height:100%;
+      border-radius: 20px;
+      transition: width 2s ease-in-out;
+    }
+    .progress {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.progress-value {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  font-weight: 600;
+  color: #000;
+}
+
+
+    /*.skill-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    }*/
+
+    /* Contact Cards */
+    .contact-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Navbar hover underline */
+    .navbar-nav .nav-link {
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    .navbar-nav .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #0d6efd;
+      transition: width 0.3s;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #0d6efd;
+    }
+
+    .navbar-nav .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .navbar-nav .nav-link.active {
+      color: #0d6efd;
+    }
+
+    .navbar-nav .nav-link.active::after {
+      width: 100%;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 992px) {
+      .hero-section {
+        text-align: center;
+      }
+
+      .hero-section img {
+        margin-top: 100px;
+      }
+
+      .about-img {
+        margin-right: 0;
+        margin-bottom: 2rem;
+      }
+
+      .contact-section .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+
+      .tab-card {
+        max-width: 100%;
+      }
+
+      .nav-tabs .nav-link {
+        margin: 0 2px;
+        font-size: 14px;
+      }
+
+      #projects .row.g-4>.col-md-4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    .lead{
+      text-align: justify;
+    }
+    #loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff; /* background color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.6s ease; /* smooth fade out */
+}
+
+/* Spinner */
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #0d6efd;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Spin animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Hide loader */
+#loader.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+  </style>
+</head>
+
+<body class="bg-light">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg shadow fixed-top bg-black">
+    <div class="container">
+      <a class="navbar-brand text-primary fw-bold" href="#">My Portfolio</a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse text-center" id="navbarNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link text-primary" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-primary" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link text-primary" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link text-primary" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link text-primary" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section text-center text-md-start mb-4">
+    <div class="container">
+      <div class="row align-items-center justify-content-center abc">
+        <div class="col-md-6 text-center" data-aos="zoom-in">
+          <img src="image/WhatsApp Image 2024-02-19 at 20.15.21_b641591a.jpg" alt="Archita Photo">
+        </div>
+        <div class="col-md-6 mt-4 mt-md-0" data-aos="fade-left">
+          <h1 class="display-4 fw-bold text-dark typewriter">I'm <span>Archita Panda</span></h1>
+          <h3 class="text-uppercase text-primary">Frontend Developer</h3>
+          <p class="lead mt-3" data-aos="fade-right">
+            I build responsive, modern, and interactive websites using HTML,
+            CSS, JavaScript, and Bootstrap.
+          </p>
+          <a href="#about" class="btn btn-outline-primary rounded-pill me-2 two" data-aos="fade-up">About Me</a>
+          <a href="#projects" class="btn btn-outline-primary rounded-pill two" data-aos="fade-up">My Work</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section bg-light py-5">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-down">
+        <h2 class="fw-bold">About Me</h2>
+        <hr class="w-25 mx-auto text-primary" />
+      </div>
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center" data-aos="zoom-in" data-aos-delay="100">
+          <img src="1767974.jpg" class="img-fluid rounded shadow-lg about-img" alt="About Image" />
+        </div>
+        <div class="col-md-6" data-aos="fade-left" data-aos-delay="300">
+          <p class="lead">Hi! I'm <span class="text-primary">Archita</span>, a passionate Frontend Developer who loves turning ideas into visually appealing and user-friendly digital experiences.</p>
+          <p class="lead">I specialize in creating responsive websites that adapt perfectly to all screen sizes.</p>
+          <a href="#contact" class="btn btn-primary custom-btn">Let's Connect</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills-section py-5" style="background: linear-gradient(135deg, #e3f2fd, #fff);" data-aos="fade-up">
+    <div class="container text-center">
+      <h2 class="fw-bold text-primary text-uppercase mb-3" data-aos="fade-down" data-aos-delay="100">My Skills</h2>
+      <p class="text-muted" data-aos="fade-down" data-aos-delay="200">Technologies I use to craft beautiful websites</p>
+      <hr class="w-25 mx-auto text-primary" data-aos="fade-down" data-aos-delay="300" />
+      <div class="row gy-4 mt-4">
+        <div class="col-md-6">
+          <div class="p-3 bg-white rounded-4 shadow-sm mb-4 skill-card" data-aos="fade-up" data-aos-delay="100">
+            <h5><i class="bi bi-filetype-html text-danger me-2"></i>HTML</h5>
+            <div class="progress" style="height:10px">
+              <div class="progress-bar bg-primary" data-progress="95"></div>
+            </div>
+          </div>
+          <div class="p-3 bg-white rounded-4 shadow-sm mb-4 skill-card" data-aos="fade-up" data-aos-delay="200">
+            <h5><i class="bi bi-filetype-css text-info me-2"></i>CSS</h5>
+            <div class="progress" style="height:10px">
+              <div class="progress-bar bg-success" data-progress="90"></div>
+            </div>
+          </div>
+          <div class="p-3 bg-white rounded-4 shadow-sm skill-card" data-aos="fade-up" data-aos-delay="300">
+            <h5><i class="bi bi-filetype-js text-warning me-2"></i>JavaScript</h5>
+            <div class="progress" style="height:10px">
+              <div class="progress-bar bg-warning" data-progress="80"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="p-3 bg-white rounded-4 shadow-sm mb-4 skill-card" data-aos="fade-up" data-aos-delay="400">
+            <h5><i class="bi bi-bootstrap-fill text-purple me-2"></i>Bootstrap</h5>
+            <div class="progress" style="height:10px">
+              <div class="progress-bar bg-info" data-progress="90"></div>
+            </div>
+          </div>
+          <div class="p-3 bg-white rounded-4 shadow-sm mb-4 skill-card" data-aos="fade-up" data-aos-delay="500">
+            <h5><i class="bi bi-lightning-charge text-danger me-2"></i>React (Basics)</h5>
+            <div class="progress" style="height:10px">
+              <div class="progress-bar bg-danger" data-progress="70"></div>
+            </div>
+          </div>
+          <div class="p-3 bg-white rounded-4 shadow-sm skill-card" data-aos="fade-up" data-aos-delay="600">
+            <h5><i class="bi bi-github text-dark me-2"></i>Git & GitHub</h5>
+            <div class="progress" style="height:10px">
+              <div class="progress-bar bg-secondary" data-progress="75"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-down">
+        <h2 class="fw-bold">My Projects</h2>
+        <hr class="w-25 mx-auto text-primary" />
+        <p class="text-muted">A collection of my favorite Frontend and Backend projects.</p>
+      </div>
+
+      <!-- Tabs without extra container -->
+      <nav class="mb-4">
+        <div class="nav nav-tabs justify-content-center flex-wrap" id="nav-tab" role="tablist">
+          <button class="nav-link active fw-semibold" id="nav-frontend-tab" data-bs-toggle="tab" data-bs-target="#frontend" type="button">Frontend</button>
+          <button class="nav-link fw-semibold" id="nav-backend-tab" data-bs-toggle="tab" data-bs-target="#backend" type="button">Backend</button>
+          <button class="nav-link fw-semibold" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#contacttab" type="button">Contact</button>
+        </div>
+      </nav>
+
+      <div class="tab-content" id="projectsTabContent">
+        <!-- Frontend Tab -->
+        <div class="tab-pane fade show active" id="frontend">
+          <p class="text-center text-muted mb-4" data-aos="fade-up" data-aos-delay="200">
+            <strong>Frontend Projects</strong> — Built with HTML, CSS, Bootstrap, and JavaScript.
+          </p>
+          <div class="row g-4">
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+              <div class="card h-100 shadow-sm project-card border-0">
+                <img src="1383586.jpg" class="card-img-top rounded-top" alt="Amazon Clone">
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">
+                    <a href="#" target="_blank" class="text-decoration-none text-primary">Amazon Clone Website</a>
+                  </h5>
+                  <p class="card-text text-muted">An Amazon-like responsive website made using HTML, CSS, and Bootstrap.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="400">
+              <div class="card h-100 shadow-sm project-card border-0">
+                <img src="OIP (1).jpeg" class="card-img-top rounded-top" alt="Portfolio Website">
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">
+                    <a href="#" target="_blank" class="text-decoration-none text-primary">Personal Portfolio</a>
+                  </h5>
+                  <p class="card-text text-muted">A modern personal portfolio website to showcase my skills and work.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="500">
+              <div class="card h-100 shadow-sm project-card border-0">
+                <img src="blue-list-with-blue-background_737983-197.jpg" class="card-img-top rounded-top one" alt="To-do App">
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">
+                    <a href="#" target="_blank" class="text-decoration-none text-primary ">To-do List App</a>
+                  </h5>
+                  <p class="card-text text-muted">A simple task management app built using JavaScript and local storage.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend Tab -->
+        <div class="tab-pane fade" id="backend">
+          <p class="text-center text-muted mb-4" data-aos="fade-up" data-aos-delay="200">
+            <strong>Backend Projects</strong> — Node.js, Express, and Database-driven applications.
+          </p>
+          <div class="row g-4">
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+              <div class="card h-100 shadow-sm project-card border-0">
+                <img src="OIP (2).jpeg" class="card-img-top rounded-top" alt="API Project">
+                <div class="card-body">
+                  <h5 class="card-title fw-bold text-primary">RESTful API Service</h5>
+                  <p class="card-text text-muted">Created using Node.js and Express for user management and authentication.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Tab -->
+        <div class="tab-pane fade" id="contacttab">
+          <p class="text-center text-muted mb-4" data-aos="fade-up" data-aos-delay="200">
+            <strong>Contact Form Projects</strong> — Interactive forms and validation logic.
+          </p>
+          <div class="row g-4">
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+              <div class="card h-100 shadow-sm project-card border-0">
+                <img src="OIP (3).jpeg" class="card-img-top rounded-top" alt="Contact Form">
+                <div class="card-body">
+                  <h5 class="card-title fw-bold text-primary">Interactive Contact Form</h5>
+                  <p class="card-text text-muted">Responsive contact form with JS validation and backend integration.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- Contact -->
+  <section id="contact" class="contact-section py-5 col-md-8 mx-auto">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-down">
+      <h2 class="fw-bold">Contact</h2>
+      <hr class="w-25 mx-auto text-primary">
+      <p class="text-muted">
+        Feel free to reach out for collaborations or just a friendly hello!
+      </p>
+    </div>
+
+    <div class="row gy-4 align-items-stretch">
+      <!-- Left: Contact Info -->
+      <div class="col-md-6 d-flex" data-aos="fade-right" data-aos-delay="100">
+        <div class="p-4 shadow rounded bg-light w-100 d-flex flex-column justify-content-between contact-card">
+          <div>
+            <div class="mb-4 d-flex align-items-start" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon bg-primary text-white rounded-circle p-3 me-3">
+                <i class="bi bi-geo-alt fs-5"></i>
+              </div>
+              <div>
+                <h5 class="fw-bold">Address</h5>
+                <p>Tamando, Bhubaneswar, Odisha 752054</p>
+              </div>
+            </div>
+            <div class="mb-4 d-flex align-items-start" data-aos="fade-up" data-aos-delay="300">
+              <div class="icon bg-primary text-white rounded-circle p-3 me-3">
+                <i class="bi bi-telephone fs-5 "></i>
+              </div>
+              <div>
+                <h5 class="fw-bold">Call Us</h5>
+                <p>+91 7854816214</p>
+              </div>
+            </div>
+
+            <div class="mb-4 d-flex align-items-start" data-aos="fade-up" data-aos-delay="400">
+              <div class="icon bg-primary text-white rounded-circle p-4 me-2">
+                <i class="bi bi-envelope fs-5"></i>
+              </div>
+              <div>
+                <h5 class="fw-bold">Email Us</h5>
+                <p>architapanda158@gmail.com</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="map-container mt-4 flex-grow-1" data-aos="zoom-in" data-aos-delay="500">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.887679148926!2d-74.00601538459498!3d40.7127757793307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a316f9d3c8b%3A0xe9c01f8d4bbd87f!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1696702377471!5m2!1sen!2sus"
+              width="100%"
+              height="100%"
+              style="border:0; border-radius:10px;"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+
+       <!-- Right: Contact Form -->
+      <div class="col-md-6 d-flex" data-aos="fade-left" data-aos-delay="100">
+        <form class="p-5 shadow rounded bg-light w-100 d-flex flex-column justify-content-between contact-card" data-aos="fade-up" data-aos-delay="200">
+          <div>
+            <div class="mb-3"><input type="text" class="form-control" placeholder="Full Name"></div>
+            <div class="mb-3"><input type="email" class="form-control" placeholder="Email Address"></div>
+            <div class="mb-3"><input type="text" class="form-control" placeholder="Subject"></div>
+            <div class="mb-3"><input type="text" class="form-control" placeholder="Address"></div>
+            <div class="mb-3"><textarea class="form-control" rows="5" placeholder="Message"></textarea></div>
+          </div>
+          <button class="btn btn-primary w-100 rounded-pill contact-btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="loader">
+  <div class="spinner"></div>
+</div>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <p>© 2025 Archita Panda. All rights reserved.</p>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button id="scrollTopBtn" class="btn btn-primary rounded-circle p-2 icon">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <script>
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    window.onscroll = () => scrollTopBtn.style.display = (document.documentElement.scrollTop > 200) ? 'block' : 'none';
+    scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+  AOS.init({
+    duration: 1000,  /* animation speed */
+    offset:100,  /* offset (in px) from the original trigger point */
+    easing: 'ease-in-out'
+  });
+  
+
+document.addEventListener("DOMContentLoaded", () => {
+  const progressBars = document.querySelectorAll(".progress-bar");
+
+  function animateProgress() {
+    progressBars.forEach(bar => {
+      const value = parseInt(bar.getAttribute("data-progress"));
+      const barPos = bar.getBoundingClientRect().top;
+      const screenHeight = window.innerHeight;
+
+      // If bar is in view
+      if (barPos < screenHeight - 50 && barPos > 0) {
+        if (!bar.classList.contains("animating")) {
+          bar.classList.add("animating");
+
+          let count = 0;
+          let percentageText = bar.parentElement.querySelector(".progress-value");
+
+          // Create percentage text if not exists
+          if (!percentageText) {
+            percentageText = document.createElement("span");
+            percentageText.classList.add("progress-value");
+            percentageText.style.position = "absolute";
+            percentageText.style.right = "10px";
+            percentageText.style.top = "0";
+            percentageText.style.height = "100%";
+            percentageText.style.display = "flex";
+            percentageText.style.alignItems = "center";
+            percentageText.style.fontWeight = "bold";
+            percentageText.style.color = "#000";
+            bar.parentElement.style.position = "relative";
+            bar.parentElement.appendChild(percentageText);
+          }
+
+          // Reset to 0 before reanimating
+          bar.style.transition = "none";
+          bar.style.width = "0";
+          percentageText.textContent = "0%";
+
+          // Trigger reflow before starting transition
+          bar.offsetWidth; 
+
+          // Animate bar
+          bar.style.transition = "width 2s ease-in-out";
+          bar.style.width = value + "%";
+
+          // Animate percentage number
+          const interval = setInterval(() => {
+            if (count < value) {
+              count++;
+              percentageText.textContent = count + "%";
+            } else {
+              clearInterval(interval);
+            }
+          }, 20);
+
+          // After animation ends, allow it to replay next time
+          setTimeout(() => {
+            bar.classList.remove("animating");
+          }, 2500);
+        }
+      }
+    });
+  }
+
+  window.addEventListener("scroll", animateProgress);
+  animateProgress();
+});
+
+
+
+  
+const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+function setActiveLink() {
+  let fromTop = window.scrollY + 80; // adjust based on navbar height
+
+  navLinks.forEach(link => {
+    let section = document.querySelector(link.hash);
+    if (
+      section.offsetTop <= fromTop &&
+      section.offsetTop + section.offsetHeight > fromTop
+    ) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', setActiveLink);
+
+  window.addEventListener('load', function() {
+    const loader = document.getElementById('loader');
+    loader.classList.add('hidden'); // add fade-out effect
+    setTimeout(() => {
+      loader.style.display = 'none'; // remove from DOM after fade
+    }, 600); // match the CSS transition time
+  });
+
+</script>
+
+
+</body>
+</html>
