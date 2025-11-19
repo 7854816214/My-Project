@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #153677, #4e085f);
+  padding: 20px;
+}
+
+.todo-app {
+  width: 100%;
+  max-width: 540px;
+  background: #fff;
+  margin: 100px auto 20px;
+  padding: 40px 40px 70px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.todo-app h2 {
+  color: #002765;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.todo-app h2 img {
+  width: 30px;
+  margin-left: 10px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 12px 30px;
+  background: #ff5945;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ff2c1a;
+}
+
+ul {
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px;
+  user-select: none;
+  cursor: default;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  transition: background 0.3s;
+}
+
+.task-text {
+  flex: 1;
+  padding-left: 40px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.task-text::before {
+  content: "";
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  border: 2px solid #002765;
+  left: 10px;
+  transition: all 0.3s;
+}
+
+.task-text.checked::before {
+  background-color: #de600c;
+  border-color: black;
+  background-size: 16px 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.task-text.pending {
+  color: #333;
+}
+
+.task-text.checked {
+  color: #888;
+  text-decoration: line-through;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+  flex-shrink: 0;
+  margin-left: 10px;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+.edit-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.3s;
+  flex-shrink: 0;
+  margin-left: 10px;
+}
+
+.edit-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Filter Buttons */
+.filter-row {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 25px;
+  background-color: black;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filter-btn:hover {
+  background-color: #d1d1d1;
+}
+
+.filter-btn.active {
+  background-color: #002765;
+  color: #fff;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 480px) {
+  ul li {
+    font-size: 14px;
+    padding: 10px 8px;
+  }
+  .task-text {
+    padding-left: 30px;
+  }
+  .task-text::before {
+    height: 18px;
+    width: 18px;
+    left: 8px;
+  }
+  .delete-btn, .edit-btn {
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+  .filter-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
