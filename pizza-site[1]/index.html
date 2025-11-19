@@ -1,0 +1,781 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Italian Cuisine | Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/pizza.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+   <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="images/6978255.png" alt="Logo" width="40" height="40" class="me-2">
+      Italian Cuisine
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Slider -->
+<div id="heroSlider" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+
+  <div class="carousel-inner">
+
+    <!-- Slide 1 -->
+    <div class="carousel-item active">
+      <section class="hero d-flex align-items-center">
+        <div class="container text-start position-relative">
+          <div class="hero-content animate-text-left">
+            <p class="text-warning fw-semibold mb-1">Delicious</p>
+            <h1 class="display-4 fw-bold text-white">ITALIAN CUISINE</h1>
+            <p class="text-light mt-3">
+              A small river named Duden flows by their place and supplies it
+              with the necessary regelialia.
+            </p>
+            <div class="mt-4">
+              <a href="menu.html" class="btn btn-warning me-2">Order Now</a>
+              <a href="menu.html" class="btn btn-outline-light">View Menu</a>
+            </div>
+          </div>
+          <div class="hero-circle zoom-img">
+            <img src="images/bg_1.png" alt="Pizza" class="circle-img">
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item">
+      <section class="hero hero-right d-flex align-items-center">
+        <div class="container text-end position-relative">
+          <div class="hero-content animate-text-left">
+            <p class="text-warning fw-semibold mb-1">Tasty</p>
+            <h1 class="display-4 fw-bold text-white">ITALIAN DELIGHTS</h1>
+            <p class="text-light mt-3">
+              Fresh ingredients and authentic recipes make every bite memorable.
+            </p>
+            <div class="mt-4">
+              <a href="menu.html" class="btn btn-warning me-2">Order Now</a>
+              <a href="menu.html" class="btn btn-outline-light">View Menu</a>
+            </div>
+          </div>
+          <div class="hero-circle hero-circle-left zoom-img">
+            <img src="images/bg_2.png" alt="Pizza 2" class="circle-img">
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-item">
+      <section class="hero-center">
+        <div class="hero-center-content text-center animate-text-left">
+          <p class="text-warning fw-semibold mb-1">Savor</p>
+          <h1 class="display-4 fw-bold text-white">OUR SPECIALITY</h1>
+          <p class="text-light mt-3">
+            Experience the authentic taste of Italian cuisine in a cozy atmosphere.
+          </p>
+          <div class="mt-4">
+            <a href="menu.html" class="btn btn-warning me-2">Order Now</a>
+            <a href="menu.html" class="btn btn-outline-light">View Menu</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </div>
+</div>
+
+<!-- Info Bar -->
+<section class="info-bar text-light py-5 mt-0" style="background-color:#111;">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center">
+
+    <div class="info-item d-flex align-items-center mb-3 mb-lg-0">
+      <i class="bi bi-telephone-fill text-warning fs-4 me-3" data-aos="fade-up"></i>
+      <div>
+        <h6 class="fw-bold mb-1" data-aos="fade-up" data-aos-delay="100">000 (123) 456 7890</h6>
+        <p class="mb-0 small text-secondary" data-aos="fade-up" data-aos-delay="200">A small river named Duden flows</p>
+      </div>
+    </div>
+
+    <div class="info-item d-flex align-items-center mb-3 mb-lg-0">
+      <i class="bi bi-geo-alt-fill text-warning fs-4 me-3" data-aos="fade-up"></i>
+      <div>
+        <h6 class="fw-bold mb-1" data-aos="fade-up" data-aos-delay="100">198 West 21th Street</h6>
+        <p class="mb-0 small text-secondary" data-aos="fade-up" data-aos-delay="200">Suite 721 New York NY 10016</p>
+      </div>
+    </div>
+
+    <div class="info-item d-flex align-items-center mb-3 mb-lg-0">
+      <i class="bi bi-clock-fill text-warning fs-4 me-3" data-aos="fade-up"></i>
+      <div>
+        <h6 class="fw-bold mb-1" data-aos="fade-up" data-aos-delay="100">Open Monday-Friday</h6>
+        <p class="mb-0 small text-secondary" data-aos="fade-up" data-aos-delay="200">8:00am - 9:00pm</p>
+      </div>
+    </div>
+
+    <div class="info-social d-flex align-items-center gap-3">
+      <a href="#" class="text-warning fs-5" data-aos="fade-up" data-aos-delay="300"><i class="bi bi-twitter"></i></a>
+      <a href="#" class="text-warning fs-5" data-aos="fade-up" data-aos-delay="400"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="text-warning fs-5" data-aos="fade-up" data-aos-delay="500"><i class="bi bi-instagram"></i></a>
+    </div>
+
+  </div>
+</section>
+
+<!-- Welcome Section -->
+<section class="welcome-section d-flex flex-wrap">
+  <div class="welcome-img col-lg-6 col-12 p-0">
+    <img src="images/about.jpg" alt="Restaurant" class="img-fluid h-100 w-100 object-fit-cover">
+  </div>
+
+  <div class="welcome-text col-lg-6 col-12 d-flex flex-column justify-content-center p-5 text-light">
+    <h3 class="fw-bold mb-4 text-uppercase animate-text">
+      Welcome to <span class="text-warning">Pizza</span> a Restaurant
+    </h3>
+    <p class="text-secondary animate-text">
+      On her way she met a copy. The copy warned the Little Blind Text,
+        that where it came from it would have been rewritten a thousand times and everything that
+        was left from its origin would be the word “and” and the Little Blind Text should turn
+        around and return to its own, safe country. But nothing the copy said could convince her,
+        and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk
+        with Longe and Parole and dragged her into their agency, where they abused her for their content
+    </p>
+  </div>
+</section>
+<!-- Our Services Section -->
+  <section class="our-services-section">
+     <div class="overlay"></div>
+      <div class="services-content text-center">
+         <h2 class="section-title">Our Service</h2> 
+         <p class="section-desc"> Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p> 
+         <div class="services-cards d-flex justify-content-center flex-wrap mt-5">
+           <!-- Service 1 --> 
+            <div class="service-card"> 
+              <div class="service-img-container">
+                 <img src="images/preview-xl.jpg" alt="Healthy Food" class="service-img"> </div> 
+                 <h3>Healthy Food</h3>
+                  <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                 </div> 
+                 <!-- Service 2 --> 
+                  <div class="service-card"> 
+                    <div class="service-img-container"> 
+                      <img src="images/fast-delivery-icon-fast-delivery-logo-free-vector.jpg" alt="Fastest Delivery" class="service-img"> </div> 
+                      <h3>Fastest Delivery</h3> <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p> </div>
+                       <!-- Service 3 --> <div class="service-card"> <div class="service-img-container"> 
+                        <img src="images/originalrecipe.jpg" alt="Original Recipe" class="service-img"> </div> 
+                        <h3>Original Recipe</h3> <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p> </div>
+                       </div>
+                       </div> 
+                      </section>
+                      
+    
+
+    
+    <section class="pizza-section py-5 text-center text-white">
+      <div class="container">
+        <h2 class="fw-bold mb-3">HOT PIZZA MEALS</h2>
+        <p class="text-white mb-5">
+          Far far away, behind the word mountains, far from the countries Vokalia
+          and Consonantia, there live the blind texts.
+        </p>
+
+        <div class="row g-4">
+          <!-- Pizza Card 1 -->
+          <div class="col-md-4 col-lg-3">
+            <div class="pizza-card">
+              <img src="images/pizza-1.jpg" class="img-fluid" alt="Italian Pizza" />
+              <div class="pizza-content">
+                <h5>Italian Pizza</h5>
+                <p>
+                  Far far away, behind the word mountains, far from the countries
+                  Vokalia and Consonantia
+                </p>
+                <div class="d-flex align-items-center justify-content-center">
+                  <span class="price">$2.90</span>
+                  <button class="btn btn-outline-light btn-sm ms-3">Order</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pizza Card 2 -->
+          <div class="col-md-4 col-lg-3">
+            <div class="pizza-card">
+              <img src="images/pizza-2.jpg" class="img-fluid" alt="Greek Pizza" />
+              <div class="pizza-content">
+                <h5>Greek Pizza</h5>
+                <p>
+                  Far far away, behind the word mountains, far from the countries
+                  Vokalia and Consonantia
+                </p>
+                <div class="d-flex align-items-center justify-content-center">
+                  <span class="price">$2.90</span>
+                  <button class="btn btn-outline-light btn-sm ms-3">Order</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pizza Card 3 -->
+          <div class="col-md-4 col-lg-3">
+            <div class="pizza-card">
+              <img src="images/pizza-3.jpg" class="img-fluid" alt="Caucasian Pizza" />
+              <div class="pizza-content">
+                <h5>Caucasian Pizza</h5>
+                <p>
+                  Far far away, behind the word mountains, far from the countries
+                  Vokalia and Consonantia
+                </p>
+                <div class="d-flex align-items-center justify-content-center">
+                  <span class="price">$2.90</span>
+                  <button class="btn btn-outline-light btn-sm ms-3">Order</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pizza Card 4 -->
+          <div class="col-md-4 col-lg-3">
+            <div class="pizza-card">
+              <img src="images/pizza-4.jpg" class="img-fluid" alt="Margherita" />
+              <div class="pizza-content">
+                <h5>BBQ Chicken</h5>
+                <p>
+                  Far far away, behind the word mountains, far from the countries
+                  Vokalia and Consonantia
+                </p>
+                <div class="d-flex align-items-center justify-content-center">
+                  <span class="price">$2.90</span>
+                  <button class="btn btn-outline-light btn-sm ms-3">Order</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <div class="pizza-card">
+              <img src="images/pizza-5.jpg" class="img-fluid" alt="Margherita" />
+              <div class="pizza-content">
+                <h5>Margherita</h5>
+                <p>
+                  Far far away, behind the word mountains, far from the countries
+                  Vokalia and Consonantia
+                </p>
+                <div class="d-flex align-items-center justify-content-center">
+                  <span class="price">$2.90</span>
+                  <button class="btn btn-outline-light btn-sm ms-3">Order</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <div class="pizza-card">
+              <img src="images/pizza-6.jpg" class="img-fluid" alt="Margherita" />
+              <div class="pizza-content">
+                <h5>Margherita cheese</h5>
+                <p>
+                  Far far away, behind the word mountains, far from the countries
+                  Vokalia and Consonantia
+                </p>
+                <div class="d-flex align-items-center justify-content-center">
+                  <span class="price">$3.90</span>
+                  <button class="btn btn-outline-light btn-sm ms-3">Order</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <div class="pizza-card">
+              <img src="images/pizza-6.jpg" class="img-fluid" alt="Margherita" />
+              <div class="pizza-content">
+                <h5>Corn cheese </h5>
+                <p>
+                  Far far away, behind the word mountains, far from the countries
+                  Vokalia and Consonantia
+                </p>
+                <div class="d-flex align-items-center justify-content-center">
+                  <span class="price">$2.90</span>
+                  <button class="btn btn-outline-light btn-sm ms-3">Order</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pizza Card 5 -->
+          <div class="col-md-4 col-lg-3">
+            <div class="pizza-card">
+              <img src="images/pizza-7.jpg" class="img-fluid" alt="Tomatoe Pie" />
+              <div class="pizza-content">
+                <h5>Tomatoe Pie</h5>
+                <p>
+                  Far far away, behind the word mountains, far from the countries
+                  Vokalia and Consonantia
+                </p>
+                <div class="d-flex align-items-center justify-content-center">
+                  <span class="price">$2.90</span>
+                  <button class="btn btn-outline-light btn-sm ms-3">Order</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+      <section class="menu-section py-5 text-white text-center">
+      <div class="container" data-aos="fade-up">
+        <!-- Title -->
+        <h2 class="fw-bold mb-3">OUR MENU PRICING</h2>
+        <div class="divider mb-4">
+          <span></span><i class="bi bi-star-fill mx-2"></i><span></span>
+        </div>
+        <p class="text-muted mb-5">
+          Far far away, behind the word mountains, far from the countries Vokalia
+          and Consonantia, there live the blind texts.
+        </p>
+
+        <div class="row gy-4">
+          <!-- LEFT COLUMN -->
+          <div class="col-lg-6">
+            <div class="menu-item" data-aos="fade-right">
+              <img src="images/pizza-1.jpg" alt="Italian Pizza" />
+              <div>
+                <h5>Italian Pizza</h5>
+                <p>A small river named Duden flows by their place and supplies</p>
+              </div>
+              <span class="price">$20.00</span>
+            </div>
+
+            <div class="menu-item" data-aos="fade-right" data-aos-delay="100">
+              <img src="images/pizza-2.jpg" alt="Hawaiian Pizza" />
+              <div>
+                <h5>Hawaiian Pizza</h5>
+                <p>A small river named Duden flows by their place and supplies</p>
+              </div>
+              <span class="price">$29.00</span>
+            </div>
+
+            <div class="menu-item" data-aos="fade-right" data-aos-delay="200">
+              <img src="images/pizza-3.jpg" alt="Greek Pizza" />
+              <div>
+                <h5>Greek Pizza</h5>
+                <p>A small river named Duden flows by their place and supplies</p>
+              </div>
+              <span class="price">$20.00</span>
+            </div>
+
+            <div class="menu-item" data-aos="fade-right" data-aos-delay="300">
+              <img src="images/pizza-4.jpg" alt="Bacon Crispy Thins" />
+              <div>
+                <h5>Bacon Crispy Thins</h5>
+                <p>A small river named Duden flows by their place and supplies</p>
+              </div>
+              <span class="price">$20.00</span>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN -->
+          <div class="col-lg-6">
+            <div class="menu-item" data-aos="fade-left">
+              <img src="images/pizza-5.jpg" alt="Hawaiian Special" />
+              <div>
+                <h5>Hawaiian Special</h5>
+                <p>A small river named Duden flows by their place and supplies</p>
+              </div>
+              <span class="price">$49.91</span>
+            </div>
+
+            <div class="menu-item" data-aos="fade-left" data-aos-delay="100">
+              <img src="images/pizza-6.jpg" alt="Ultimate Overload" />
+              <div>
+                <h5>Ultimate Overload</h5>
+                <p>A small river named Duden flows by their place and supplies</p>
+              </div>
+              <span class="price">$20.00</span>
+            </div>
+
+            <div class="menu-item" data-aos="fade-left" data-aos-delay="200">
+              <img src="images/pizza-7.jpg" alt="Bacon Pizza" />
+              <div>
+                <h5>Bacon Pizza</h5>
+                <p>A small river named Duden flows by their place and supplies</p>
+              </div>
+              <span class="price">$20.00</span>
+            </div>
+
+            <div class="menu-item" data-aos="fade-left" data-aos-delay="300">
+              <img src="images/pizza-8.jpg" alt="Ham & Pineapple" />
+              <div>
+                <h5>Ham & Pineapple</h5>
+                <p>A small river named Duden flows by their place and supplies</p>
+              </div>
+              <span class="price">$20.00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Simple Preloader -->
+<div id="preloader">
+  <div class="spinner"></div>
+  
+</div>
+<!-- ======= Gallery & Stats Section ======= -->
+<section class="gallery-section py-5">
+  <div class="container-fluid p-0">
+    <div class="row g-0">
+      <div class="col-md-3 col-sm-6">
+        <div class="gallery-img">
+          <img src="images/gallery-1.jpg" alt="Gallery 1" class="img-fluid">
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="gallery-img">
+          <img src="images/gallery-2.jpg" alt="Gallery 2" class="img-fluid">
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="gallery-img">
+          <img src="images/gallery-3.jpg" alt="Gallery 3" class="img-fluid">
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="gallery-img">
+          <img src="images/gallery-4.jpg" alt="Gallery 4" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= Stats Section ======= -->
+<section class="stats-section py-5 text-center">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-3 col-sm-6">
+        <div class="stat-box">
+          <div class="icon"><i class="fa-solid fa-pizza-slice"></i></div>
+          <h3 class="count" data-target="100">0</h3>
+          <p>Pizza Branches</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="stat-box">
+          <div class="icon"><i class="bi bi-award"></i></div>
+          <h3 class="count" data-target="85">0</h3>
+          <p>Number of Awards</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="stat-box">
+          <div class="icon"><i class="bi bi-emoji-smile"></i></div>
+          <h3 class="count" data-target="10567">0</h3>
+          <p>Happy Customers</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="stat-box">
+          <div class="icon"><i class="bi bi-person"></i></div>
+          <h3 class="count" data-target="900">0</h3>
+          <p>Staff</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- Menu Section -->
+  <section class="menu-section text-center">
+    <div class="container">
+      <ul class="nav justify-content-center menu-tabs" id="menuTabs" role="tablist">
+        <li class="nav-item">
+          <button class="nav-link active" id="pizza-tab" data-bs-toggle="tab" data-bs-target="#pizza" type="button" role="tab">Pizza</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" id="drinks-tab" data-bs-toggle="tab" data-bs-target="#drinks" type="button" role="tab">Drinks</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" id="burgers-tab" data-bs-toggle="tab" data-bs-target="#burgers" type="button" role="tab">Burgers</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" id="pasta-tab" data-bs-toggle="tab" data-bs-target="#pasta" type="button" role="tab">Pasta</button>
+        </li>
+      </ul>
+
+      <div class="tab-content" id="menuTabContent">
+        <!-- Pizza -->
+        <div class="tab-pane fade show active" id="pizza" role="tabpanel">
+          <div class="row g-4 justify-content-center">
+            <div class="col-md-4">
+              <div class="card menu-card">
+                <img src="images/pizza-2.jpg" alt="Pizza 1">
+                <h5>Italian Pizza</h5>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+                <div class="price">$2.90</div>
+                <button class="btn btn-custom">Add to cart</button>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card menu-card">
+                <img src="images/pizza-3.jpg" alt="Pizza 2">
+                <h5>Cheese Burst Pizza</h5>
+                <p>Delicious cheesy pizza topped with mozzarella and herbs.</p>
+                <div class="price">$3.50</div>
+                <button class="btn btn-custom">Add to cart</button>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card menu-card">
+                <img src="images/pizza-5.jpg" alt="Pizza 3">
+                <h5>Pepperoni Pizza</h5>
+                <p>Loaded with pepperoni and fresh cheese, baked to perfection.</p>
+                <div class="price">$3.00</div>
+                <button class="btn btn-custom">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Drinks -->
+        <div class="tab-pane fade" id="drinks" role="tabpanel">
+          <div class="row g-4 justify-content-center">
+            <div class="col-md-4">
+              <div class="card menu-card">
+                <img src="images/drink-1.jpg" alt="Drink 1">
+                <h5>Cold Coffee</h5>
+                <p>Refreshing iced coffee with a smooth creamy texture.</p>
+                <div class="price">$1.80</div>
+                <button class="btn btn-custom">Add to cart</button>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card menu-card">
+                <img src="images/drink-2.jpg" alt="Drink 2">
+                <h5>Orange Juice</h5>
+                <p>Freshly squeezed orange juice full of vitamins and flavor.</p>
+                <div class="price">$2.20</div>
+                <button class="btn btn-custom">Add to cart</button>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card menu-card">
+                <img src="images/drink-3.jpg" alt="Drink 3">
+                <h5>Milkshake</h5>
+                <p>Rich and creamy chocolate milkshake topped with whipped cream.</p>
+                <div class="price">$2.50</div>
+                <button class="btn btn-custom">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Burgers -->
+        <div class="tab-pane fade" id="burgers" role="tabpanel">
+          <div class="row g-4 justify-content-center">
+            <div class="col-md-4">
+              <div class="card menu-card">
+                <img src="images/burger-1.jpg" alt="Burger 1">
+                <h5>Classic Burger</h5>
+                <p>Grilled beef patty with cheese, lettuce, and our signature sauce.</p>
+                <div class="price">$3.90</div>
+                <button class="btn btn-custom">Add to cart</button>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card menu-card">
+                <img src="images/burger-2.jpg" alt="Burger 2">
+                <h5>Chicken Burger</h5>
+                <p>Juicy grilled chicken fillet with fresh veggies and mayo.</p>
+                <div class="price">$3.60</div>
+                <button class="btn btn-custom">Add to cart</button>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card menu-card">
+                <img src="images/burger-3.jpg" alt="Burger 3">
+                <h5>Veggie Burger</h5>
+                <p>Healthy and delicious with crispy veggie patty and sauces.</p>
+                <div class="price">$3.20</div>
+                <button class="btn btn-custom">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pasta -->
+        <div class="tab-pane fade" id="pasta" role="tabpanel">
+          <div class="row g-4 justify-content-center">
+            <div class="col-md-4">
+              <div class="card menu-card">
+                <img src="images/pasta-1.jpg" alt="Pasta 1">
+                <h5>White Sauce Pasta</h5>
+                <p>Creamy Alfredo pasta cooked to perfection.</p>
+                <div class="price">$3.00</div>
+                <button class="btn btn-custom">Add to cart</button>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card menu-card">
+                <img src="images/pasta-2.jpg" alt="Pasta 2">
+                <h5>Red Sauce Pasta</h5>
+                <p>Spicy tomato-based pasta.</p>
+                <div class="price">$2.80</div>
+                <button class="btn btn-custom">Add to cart</button>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card menu-card">
+                <img src="images/pasta-3.jpg" alt="Pasta 3">
+                <h5>Mac & Cheese</h5>
+                <p>Cheesy and comforting, perfect for cheese lovers.</p>
+                <div class="price">$3.50</div>
+                <button class="btn btn-custom">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact -->
+<section id="contact" class="contact-section py-5">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-down">
+      <h2 class="fw-bold text-warning">Contact</h2>
+      <hr class="w-25 mx-auto text-warning">
+      <p class="text-light">
+        Feel free to reach out for collaborations or just a friendly hello!
+      </p>
+    </div>
+
+    <div class="row gy-4 align-items-stretch">
+      <!-- Left: Contact Info -->
+      <div class="col-md-6 d-flex" data-aos="fade-right" data-aos-delay="100">
+        <div class="p-4 shadow rounded bg-dark-subtle w-100 d-flex flex-column justify-content-between contact-card">
+          <div>
+            <div class="mb-4 d-flex align-items-start" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon bg-dark text-warning rounded-circle p-1 me-3">
+                <i class="bi bi-geo-alt fs-5"></i>
+              </div>
+              <div class="text-light">
+                <h5 class="fw-bold text-warning">Address</h5>
+                <p>Tamando, Bhubaneswar, Odisha 752054</p>
+              </div>
+            </div>
+
+            <div class="mb-4 d-flex align-items-start" data-aos="fade-up" data-aos-delay="300">
+              <div class="icon bg-dark text-warning rounded-circle p-1 me-3">
+                <i class="bi bi-telephone fs-5"></i>
+              </div>
+              <div class="text-light">
+                <h5 class="fw-bold text-warning">Call Us</h5>
+                <p>+91 7854816214</p>
+              </div>
+            </div>
+
+            <div class="mb-4 d-flex align-items-start" data-aos="fade-up" data-aos-delay="400">
+              <div class="icon bg-dark text-warning rounded-circle p-1 me-3">
+                <i class="bi bi-envelope fs-5"></i>
+              </div>
+              <div class="text-light">
+                <h5 class="fw-bold text-warning">Email Us</h5>
+                <p>architapanda158@gmail.com</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="map-container mt-4 flex-grow-1" data-aos="zoom-in" data-aos-delay="500">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.887679148926!2d-74.00601538459498!3d40.7127757793307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a316f9d3c8b%3A0xe9c01f8d4bbd87f!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1696702377471!5m2!1sen!2sus"
+              width="100%"
+              height="100%"
+              style="border:0; border-radius:10px;"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Contact Form -->
+      <div class="col-md-6 d-flex" data-aos="fade-left" data-aos-delay="100">
+        <form class="p-5 shadow rounded bg-dark-subtle w-100 d-flex flex-column justify-content-between contact-card" data-aos="fade-up" data-aos-delay="200">
+          <div>
+            <div class="mb-3"><input type="text" class="form-control" placeholder="First Name"></div>
+            <div class="mb-3"><input type="text" class="form-control" placeholder="Last Name"></div>
+            <div class="mb-3"><input type="email" class="form-control" placeholder="Email Address"></div>
+            <div class="mb-3"><input type="text" class="form-control" placeholder="Address"></div>
+            <div class="mb-3"><textarea class="form-control" rows="7" placeholder="Feedback"></textarea></div>
+          </div>
+          <button class="btn btn-warning w-100 rounded-pill contact-btn fw-bold text-dark">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="text-center text-light py-4 bg-black">
+  <div class="container">
+    <!-- Social Media Icons -->
+    <div class="mb-3">
+      <a href="#" class="text-warning mx-2 fs-4"><i class="bi bi-twitter"></i></a>
+      <a href="#" class="text-warning mx-2 fs-4"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="text-warning mx-2 fs-4"><i class="bi bi-instagram"></i></a>
+    </div>
+
+    <!-- Copyright -->
+    <p class="mb-0 text-secondary">&copy; 2025 <span class="text-warning fw-semibold">Italian Cuisine</span>. All Rights Reserved.</p>
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+    duration: 1000,  // animation duration in ms
+    once: false,     // animation also works on refresh and scroll again
+    mirror: true     // replays animation when scrolling back
+  });
+
+    </script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/pizza.js"></script>
+</body>
+</html>
